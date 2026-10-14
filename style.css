@@ -1,0 +1,299 @@
+/* ==========================================
+   ESTILOS GENERALES Y RESET
+   ================================---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f9f4;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   HEADER Y NAVEGACIÓN CON IMAGEN DE FONDO
+   ================================---------- */
+.header {
+    background: linear-gradient(
+        rgba(27, 77, 62, 0.75), 
+        rgba(46, 125, 50, 0.75)
+    ), 
+    url('Fondo.jpg') no-repeat center center / cover !important;
+    
+    color: #ffffff;
+    padding: 30px 0 50px 0;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.header img {
+    height: 60px;
+    width: auto;
+    margin-left: 30px;
+}
+
+/* Ocultar checkbox de menú responsive nativo */
+#menu {
+    display: none;
+}
+
+.navbar {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 4px;
+}
+
+.nav-links li a:hover {
+    color: #a5d6a7;
+    border-bottom: 2px solid #a5d6a7;
+}
+
+.header-content {
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #e8f5e9;
+    letter-spacing: 1px;
+}
+
+.header-content p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #c8e6c9;
+    line-height: 1.8;
+}
+
+/* 1. Contenedor principal para colocar mapa y texto en fila */
+.mapa-img {
+  display: block;
+  max-width: 950px;       /* Ajusta este valor si lo quieres aún más grande (ej. 1000px o 1100px) */
+  width: 90%;             /* Se adapta bien a la pantalla */
+  height: auto;
+  margin: 0 auto 30px auto; /* Lo centra en la página y le da espacio abajo */
+  border-radius: 19px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 3px solid #e0f2f1;
+}
+
+/* 3. Ajustes del bloque de texto */
+.Zonas-contente {
+  flex: 1 1 40%;                /* Toma el 40% restante del ancho */
+  text-align: left;             /* Alineación hacia la izquierda */
+}
+
+.Zonas-contente h2 {
+  font-size: 2rem;
+  color: #1b4d3e;
+  margin-bottom: 12px;
+}
+
+.Zonas-contente .txt-p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   CANECAS DE RECICLAJE (TARJETAS)
+   ================================---------- */
+.canecas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;  /* Limita el ancho máximo para que no se estire a los lados */
+    margin: 40px auto;   /* Centra la sección en la pantalla */
+    padding: 0 20px;     /* Espacio lateral de seguridad */
+}
+
+.titulo-canecas {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilos compartidos para las tarjetas de canecas */
+.caneca-1, .canecas-1 {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    border-top: 5px solid #2e7d32;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.caneca-1:hover, .canecas-1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* Diferenciación sutil por tipo según el color de la caneca */
+.caneca-1:nth-child(2) { border-top-color: #2e7d32; } /* Verde */
+.canecas-1:nth-child(3) { border-top-color: #1976d2; } /* Azul */
+.caneca-1:nth-child(4) { border-top-color: #d32f2f; } /* Roja */
+.caneca-1:nth-child(5) { border-top-color: #212121; } /* Negra */
+
+.caneca-1 img, .canecas-1 img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.caneca-1 h3, .canecas-1 h3 {
+    font-size: 1.25rem;
+    color: #1b4d3e;
+    margin-bottom: 10px;
+}
+
+.caneca-1 p, .canecas-1 p {
+    font-size: 0.92rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   SECCIÓN SOBRE NOSOTROS (MISIÓN, VISIÓN Y QUIÉNES SOMOS)
+   ================================---------- */
+.seccion-nosotros {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-institucional {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(27, 77, 62, 0.12);
+    width: 100%;
+    max-width: 1100px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: #1b4d3e;
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-nosotros {
+    background-color: #f4fbf9;
+    border-top: 5px solid #2e7d32;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-nosotros:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-nosotros h2 {
+    font-size: 1.5rem;
+    color: #1b4d3e;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.tarjeta-nosotros p {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   CONTACTO Y FOOTER (SNOOPY)
+   ================================---------- */
+.Contacto-content {
+    background-color: #1b4d3e;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px; /* Reducimos el relleno (antes estaba en 40px) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Menos espacio entre la imagen de Snoopy y el texto */
+}
+
+/* Para hacer la imagen un poco más pequeña también */
+.Contacto-content img {
+    width: 60px;  /* Reducido de 90px a 60px */
+    height: 60px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Contacto-content p {
+    font-size: 0.85rem;
+    color: #a5d6a7;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVE (MÓVILES)
+   ================================---------- */
+@media (max-width: 768px) {
+    .navbar {
+        position: static;
+        margin-top: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .contenedor {
+        padding: 25px;
+    }
+}

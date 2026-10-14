@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - EPIK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body.pagina-registro {
+            min-height: 100vh;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            font-family: Arial, sans-serif;
+        }
+        .pagina-login {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            gap: 32px;
+            align-items: center;
+        }
+        .encabezado-login {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #1b5e20;
+            margin-bottom: 5px;
+        }
+        .encabezado-login h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+        .encabezado-login p {
+            color: #388e3c;
+            font-size: 1rem;
+        }
+        .contenedor-registro {
+            grid-column: 1;
+            grid-row: 2;
+            width: 100%;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15);
+            border: 1px solid #c8e6c9;
+        }
+        .contenedor-registro h2 {
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+        .contenedor-registro input[type="text"],
+        .contenedor-registro input[type="email"],
+        .contenedor-registro input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .contenedor-registro label {
+            display: block;
+            font-weight: 600;
+            color: #1b5e20;
+            font-size: 0.9rem;
+        }
+        .contenedor-registro button {
+            background-color: #2e7d32;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .contenedor-registro button:hover {
+            background-color: #1b5e20;
+        }
+        .zona-snoopy {
+            grid-column: 2;
+            grid-row: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .snoopy-registro {
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+        }
+        #mensaje {
+            margin-top: 15px;
+            text-align: center;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="pagina-registro">
+
+    <div class="pagina-login">
+
+        <div class="encabezado-login">
+            <h1>¡Únete a EPIK!</h1>
+            <p>Regístrate para empezar a acumular puntos reciclando.</p>
+        </div>
+
+        <div class="contenedor-registro">
+            <h2>Crear cuenta</h2>
+
+            <form id="formularioCrearCuenta">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" required>
+
+                <button type="submit">Registrarme</button>
+            </form>
+
+            <p id="mensaje"></p>
+        </div>
+
+        <div class="zona-snoopy">
+            <img src="Snoppycomputadora.jpg" alt="Snoopy con laptop" class="snoopy-registro">
+        </div>
+
+    </div>
+
+    <script>
+        const formulario = document.getElementById("formularioCrearCuenta");
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("mensaje").textContent =
+                "¡Registro completado con éxito! Ahora puedes iniciar sesión.";
+        });
+    </script>
+</body>
+</html>

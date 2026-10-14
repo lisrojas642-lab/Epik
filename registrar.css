@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #333;
+    line-height: 1.6;
+} 
+
+.header {
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("Snoppy con cartelera.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 150vh;
+    color: white;
+    padding: 50px;
+}
+
+.header img {
+    width: 150px;
+}
+
+/* Fondo general y centrado de la página de registro */
+body.pagina-registro {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    font-family: Arial, sans-serif;
+}
+
+/* Estructura de rejilla: Título arriba, formulario izq, Snoopy der */
+.pagina-registro .pagina-login {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 32px;
+    align-items: center;
+}
+
+/* Título centrado abarcando todo el ancho superior */
+.pagina-registro .encabezado-login {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #1b5e20;
+    margin-bottom: 5px;
+}
+
+.pagina-registro .encabezado-login h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.pagina-registro .encabezado-login p {
+    color: #388e3c;
+    font-size: 1rem;
+}
+
+/* Tarjeta blanca del formulario a la izquierda */
+.pagina-registro .contenedor-registro {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15);
+    border: 1px solid #c8e6c9;
+}
+
+/* Estilos para los campos de texto del formulario */
+.pagina-registro .contenedor-registro input[type="text"],
+.pagina-registro .contenedor-registro input[type="email"],
+.pagina-registro .contenedor-registro input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Etiquetas de los inputs */
+.pagina-registro .contenedor-registro label {
+    display: block;
+    font-weight: 600;
+    color: #1b5e20;
+    font-size: 0.9rem;
+}
+
+/* Botón principal verde institucional */
+.pagina-registro .contenedor-registro button,
+.pagina-registro .contenedor-registro input[type="submit"] {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.pagina-registro .contenedor-registro button:hover {
+    background-color: #1b5e20;
+}
+
+/* Zona de Snoopy a la derecha */
+.pagina-registro .zona-snoopy {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina-registro .snoopy-registro {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+
+/* Estilos para los botones inferiores de navegación */
+.bloque-opciones {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.bloque-opciones p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+/* Botón secundario verde claro */
+.btn-crear-cuenta {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px solid #a5d6a7;
+    transition: all 0.3s ease;
+}
+
+.btn-crear-cuenta:hover {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+}
+
+/* Enlace para volver al inicio */
+.btn-volver-inicio {
+    display: block;
+    text-align: center;
+    color: #2e7d32;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 6px;
+    transition: color 0.3s ease;
+}
+
+.btn-volver-inicio:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
