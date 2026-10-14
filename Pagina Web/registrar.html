@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - EPIK</title>
+    <link rel="stylesheet" href="">
+</head>
+<body class="pagina-registro">
+
+    <div class="pagina-login">
+
+        <!-- Encabezado superior -->
+        <div class="encabezado-login">
+            <h1>¡Bienvenido a EPIK!</h1>
+            <p>Inicia sesión para continuar cuidando el planeta.</p>
+        </div>
+
+        <!-- Tarjeta del formulario de login -->
+        <div class="contenedor-registro">
+            <h2>Iniciar sesión</h2>
+
+            <form id="formularioLogin">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" required>
+
+                <button type="submit">Ingresar</button>
+            </form>
+
+            <p id="mensaje"></p>
+
+            <!-- Botones de abajo para nuevos usuarios -->
+            <div class="bloque-opciones">
+                <p>¿No tienes una cuenta?</p>
+                <a href="crear-cuenta.html" class="btn-crear-cuenta">Crear cuenta</a>
+                <a href="index.html" class="btn-volver-inicio">Volver al inicio</a>
+            </div>
+        </div>
+
+        <!-- Snoopy a la derecha -->
+        <div class="zona-snoopy">
+            <img src="Snoppy con cartelera.png" alt="Snoopy con cartelera" class="snoopy-registro">
+        </div>
+
+    </div>
+
+    <script>
+        const formulario = document.getElementById("formularioLogin");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("mensaje").textContent =
+                "¡Formulario completado! La verificación de tu cuenta estará disponible cuando conectemos la base de datos.";
+        });
+    </script>
+</body>
+</html>
